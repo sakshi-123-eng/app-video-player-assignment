@@ -109,11 +109,7 @@ class MainActivity : AppCompatActivity() {
         newConfig: Configuration
     ) {
         super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig)
-        if (isInPictureInPictureMode) {
-            playerView?.useController = false
-        } else {
-            playerView?.useController = true
-        }
+        playerView?.useController = !isInPictureInPictureMode
     }
 
 
